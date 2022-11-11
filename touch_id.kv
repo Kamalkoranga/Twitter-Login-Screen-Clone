@@ -1,0 +1,47 @@
+MDScreen:
+    name: 'touch_id'
+    MDFloatLayout:
+        md_bg_color: 0, 172/255, 238/255, 1
+        MDIconButton:
+            icon: 'arrow-left'
+            theme_text_color: 'Custom'
+            text_color: 1,1,1,1
+            user_font_size: '30sp'
+            pos_hint: {'center_y': .9}
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'signup'
+        Image:
+            source: 'icon.png'
+            pos_hint: {'center_x': .9, 'center_y': .91}
+            size_hint: .1, .1
+        MDLabel:
+            text: "Set Touch ID"
+            pos_hint: {'center_x': 0.5,'center_y': 0.77}
+            halign: 'center'
+            font_name: 'BMontserrat'
+            color: 1, 1, 1, 1
+            font_size: '22sp'
+        Image:
+            source: 'fingerprint.png'
+            pos_hint: {'center_x': 0.5,'center_y': .55}
+            size_hint: .8, .8
+        MDLabel:
+            text: "Repeatedly place your finger on the fingerprint reader and lift it when you feel the vibration"
+            size_hint_x: .88
+            pos_hint: {'center_x': 0.5,'center_y': 0.29}
+            halign: 'center'
+            font_name: 'MMontserrat'
+            color: 1, 1, 1, 1
+        MDLabel:
+            text: "OR"
+            pos_hint: {'center_x': 0.5,'center_y': 0.18}
+            halign: 'center'
+            font_name: 'MMontserrat'
+            color: 1, 1, 1, 1
+        MDTextButton:
+            text: "Use Traditional password"
+            pos_hint: {'center_x': 0.5,'center_y': 0.12}
+            halign: 'center'
+            font_name: 'MMontserrat'
+            color: 1, 1, 1, 1
